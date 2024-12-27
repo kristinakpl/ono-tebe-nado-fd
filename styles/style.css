@@ -131,4 +131,91 @@
   border: 1px solid #fff;
 }
 
+.lots {
+  padding: 0 24px 120px;
+  margin-top: 180px;
+  min-height: 723px;
+  height: 100%;
+  display: flex;
+  flex-direction: column; /*лоты, карточки и последняя строка(ссылка) становятся в одну колонку друг под другом*/
+}
 
+.lots__heading {
+  font-size: 40px;
+  text-transform: uppercase;
+  color: #000;
+  height: 74px;
+  margin-left: 40px;
+}
+
+.lots__card-list {
+  /* это ul*/
+  display: flex;
+  gap: 25px;
+}
+
+.lots__card-list-item {
+  /* это li*/
+  list-style: none;
+  line-height: 1.2;
+  min-height: 596px; /*высота карточки*/
+  width: 334px;
+}
+
+.card-link {
+  /* это а*/
+  text-decoration: none; /*сбросили стили - подчеркивание через а. через li не сработало*/
+  display: block;
+  height: 100%; /* чтобы контент растянулся на всю высоту карточки которую указывали в li=596px*/
+}
+
+.card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative; /*для оверлея- он задан absolut выше уже*/
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.card__title {
+  font-size: 22px;
+  text-transform: uppercase;
+  text-decoration: underline solid #d9d9d9;
+  color: #fff;
+  padding: 48px 40px 0;
+}
+
+.card__text {
+  font-size: 20px;
+  color: #fff;
+  padding: 0 40px 48px;
+}
+
+.card_type_film {
+  background-image: url(/images/card-lot-01.jpg);
+}
+
+.card_type_book {
+  background-image: url(/images/card-lot-02.jpg);
+}
+
+.card_type_picture {
+  background-image: url(/images/card-lot-03.jpg);
+}
+
+.lots__look-more-link {
+  height: 25px;
+  font-size: 20px;
+  padding: 30px 0 53px 40px;
+  text-underline-position: under;
+  color: #000;
+}
+
+.about {
+  height: 595px;
+}
