@@ -10,25 +10,28 @@
   display: grid; /*создали гриды*/
   grid-template-columns: 1fr 138px 1fr; /*лого 149 по центру, остальное по ровну оставшееся*/
   align-items: center; /*выравнивание по центру по горизонтали*/
-  padding: 85px 50px; /*отступы по горизонтали и вертикали*/
-  font-weight: 400;
+  padding: 90px 50px 96px 50px; /*отступы по горизонтали и вертикали*/
   height: 293px;
   color: #000;
-  gap: 41px; /*двигает текст в крайних колонках*/
+  gap: 42px; /*двигает текст в крайних колонках*/
 }
 
 .address {
-  justify-self: center; /*текст по центру колонки по вертикали*/
-  padding-left: 113px; /*двигает текст колонки по горизонтали*/
   font-size: 18px; /*размер шрифта из макета*/
   font-style: normal; /*убрать курсив, т.к у адреса по умолч курсив*/
   line-height: 1.35; /*междустрочный интервал*/
   text-underline-position: under; /*опустить подчеркивание, чтобы не лезло на текст*/
+  text-decoration-thickness: 1px;
+}
+
+.header__address {
+  justify-self: end; /*текст по центру колонки по вертикали*/
+  padding-right: 36px; /*двигает текст колонки по горизонтали*/
 }
 
 .header__logo {
   display: block; /*т.к тег <a> строчный- ссылка,то он не реагирует на размеры. С этм свойством -реагирует*/
-  width: min(100%, 148px); /*ширина ссылки*/
+  place-self: center;
 }
 
 .header__logo-image {
@@ -38,18 +41,19 @@
 .header__links-list {
   display: flex;
   justify-content: space-between; /*растянуть пункты меню на всю ширину колонки*/
+  gap: 20px;
 }
 
 .header__links-list-item {
   list-style: circle; /*маркеры прозрачным кружком*/
   font-size: 18px; /*размер шрифта из макета*/
-  text-decoration: underline; /*задать нижнее подчеркивание слов*/
   text-underline-position: under; /*опустить подчеркивание, чтобы не лезло на текст*/
+  text-decoration: underline solid #000 1px; /*задать нижнее подчеркивание слов*/
+  word-spacing: 2px;
 }
 
 .header__links-list-item_no-bullit {
-  /*убрали маркер и подчеркивание у первого слова*/
-  list-style: none;
+  list-style: none; /*убрали маркер у первого слова и подчеркивание нижним свойством*/
   text-decoration: none;
 }
 
@@ -115,7 +119,7 @@
   font-size: 22px;
   text-transform: uppercase;
   padding: 65px 50px 50px;
-  word-spacing: 18px; /*устанавливает размер пробела между словами и тегами в тексте*/
+  word-spacing: 18.5px; /*устанавливает размер пробела между словами и тегами в тексте*/
   z-index: 1;
 }
 
@@ -267,5 +271,34 @@
 }
 
 .footer {
-  height: 180px;
+  display: grid; /*создали гриды*/
+  grid-template-columns: 1fr 163px 1fr; /*лого 149 по центру, остальное по ровну оставшееся*/
+  justify-content: space-between;
+  padding: 150px 50px;
+  gap: 177.5px;
+}
+
+.footer__menu {
+  font-size: 18px;
+  text-align: center;
+}
+
+.footer__menu-list-item {
+  list-style: none; /*убрали маркеры. убирать надо именно у li*/
+  text-underline-position: under; /*опустить подчеркивание, чтобы не лезло на текст*/
+  text-decoration: underline solid #000 1px; /*задать нижнее подчеркивание слов*/
+}
+
+.footer__menu-link_active {
+  text-decoration: none;
+}
+
+.footer__social-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__social-list-item {
+  list-style: none;
+  width: 48px;
 }
