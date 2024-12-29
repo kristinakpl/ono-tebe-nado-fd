@@ -1,59 +1,58 @@
 .content-section {
-  /*стили для всех блоков общие*/
-  box-sizing: border-box; /*чтобы браузер не добавлял ширину, а всё было в рамках заданных paddingov*/
-  width: 1100px; /*вместо можно истользовать width:100% max-width=360px*/ /*делает ширину всегда 360 для всех блоков*/
-  margin: auto; /*делает контент по центру не зависимо от экрана*/
+  box-sizing: border-box;
+  width: 1100px;
+  margin: auto;
   background: #fff;
 }
 
 .header {
-  display: grid; /*создали гриды*/
-  grid-template-columns: 1fr 138px 1fr; /*лого 149 по центру, остальное по ровну оставшееся*/
-  align-items: center; /*выравнивание по центру по горизонтали*/
-  padding: 90px 50px 96px 50px; /*отступы по горизонтали и вертикали*/
+  display: grid;
+  grid-template-columns: 1fr 138px 1fr;
+  align-items: center;
+  padding: 90px 50px 96px 50px;
   height: 293px;
   color: #000;
-  gap: 42px; /*двигает текст в крайних колонках*/
+  gap: 42px;
 }
 
 .address {
-  font-size: 18px; /*размер шрифта из макета*/
-  font-style: normal; /*убрать курсив, т.к у адреса по умолч курсив*/
-  line-height: 1.35; /*междустрочный интервал*/
-  text-underline-position: under; /*опустить подчеркивание, чтобы не лезло на текст*/
+  font-size: 18px;
+  font-style: normal;
+  line-height: 1.35;
+  text-underline-position: under;
   text-decoration-thickness: 1px;
 }
 
 .header__address {
-  justify-self: end; /*текст по центру колонки по вертикали*/
-  padding-right: 36px; /*двигает текст колонки по горизонтали*/
+  justify-self: end;
+  padding-right: 36px;
 }
 
 .header__logo {
-  display: block; /*т.к тег <a> строчный- ссылка,то он не реагирует на размеры. С этм свойством -реагирует*/
+  display: block;
   place-self: center;
 }
 
 .header__logo-image {
-  width: 100%; /*ширина изображения, если будем менять ширину ссылки, то изображение тоже будет меняться*/
+  width: 100%;
 }
 
 .header__links-list {
   display: flex;
-  justify-content: space-between; /*растянуть пункты меню на всю ширину колонки*/
+  justify-content: space-between;
   gap: 20px;
 }
 
 .header__links-list-item {
-  list-style: circle; /*маркеры прозрачным кружком*/
-  font-size: 18px; /*размер шрифта из макета*/
-  text-underline-position: under; /*опустить подчеркивание, чтобы не лезло на текст*/
-  text-decoration: underline solid #000 1px; /*задать нижнее подчеркивание слов*/
+  list-style: circle;
+  font-size: 18px;
+  text-underline-position: under;
+  text-decoration: underline solid #000 1px;
   word-spacing: 2px;
 }
 
 .header__links-list-item_no-bullit {
-  list-style: none; /*убрали маркер у первого слова и подчеркивание нижним свойством*/
+  list-style: none;
   text-decoration: none;
 }
 
@@ -119,7 +118,7 @@
   font-size: 22px;
   text-transform: uppercase;
   padding: 65px 50px 50px;
-  word-spacing: 18.5px; /*устанавливает размер пробела между словами и тегами в тексте*/
+  word-spacing: 18.5px;
   z-index: 1;
 }
 
@@ -141,7 +140,7 @@
   min-height: 723px;
   height: 100%;
   display: flex;
-  flex-direction: column; /*лоты, карточки и последняя строка(ссылка) становятся в одну колонку друг под другом*/
+  flex-direction: column;
 }
 
 .lots__heading {
@@ -153,24 +152,21 @@
 }
 
 .lots__card-list {
-  /* это ul*/
   display: flex;
   gap: 25px;
 }
 
 .lots__card-list-item {
-  /* это li*/
   list-style: none;
   line-height: 1.2;
-  min-height: 596px; /*высота карточки*/
+  min-height: 596px;
   width: 334px;
 }
 
 .card-link {
-  /* это а*/
-  text-decoration: none; /*сбросили стили - подчеркивание через а. через li не сработало*/
+  text-decoration: none;
   display: block;
-  height: 100%; /* чтобы контент растянулся на всю высоту карточки которую указывали в li=596px*/
+  height: 100%;
 }
 
 .card {
@@ -179,7 +175,7 @@
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
-  position: relative; /*для оверлея- он задан absolut выше уже*/
+  position: relative;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -244,7 +240,7 @@
   width: 240px;
   height: 240px;
   background-color: #000;
-  border-radius: 50%; /*сделали фон круглым*/
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -271,8 +267,8 @@
 }
 
 .footer {
-  display: grid; /*создали гриды*/
-  grid-template-columns: 1fr 163px 1fr; /*лого 149 по центру, остальное по ровну оставшееся*/
+  display: grid;
+  grid-template-columns: 1fr 163px 1fr;
   justify-content: space-between;
   padding: 150px 50px;
   gap: 177.5px;
@@ -284,9 +280,9 @@
 }
 
 .footer__menu-list-item {
-  list-style: none; /*убрали маркеры. убирать надо именно у li*/
-  text-underline-position: under; /*опустить подчеркивание, чтобы не лезло на текст*/
-  text-decoration: underline solid #000 1px; /*задать нижнее подчеркивание слов*/
+  list-style: none;
+  text-underline-position: under;
+  text-decoration: underline solid #000 1px;
 }
 
 .footer__menu-link_active {
