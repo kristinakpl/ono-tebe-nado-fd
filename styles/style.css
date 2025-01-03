@@ -145,7 +145,7 @@
   font-size: 40px;
   text-transform: uppercase;
   color: #000;
-  height: 74px;
+  min-height: 74px;
   margin-left: 40px;
 }
 
@@ -268,7 +268,7 @@
   display: grid;
   grid-template-columns: 1fr 163px 1fr;
   justify-content: space-between;
-  padding: 180px 50px;
+  padding: 180px 50px 82px;
   gap: 144.5px;
 }
 
